@@ -6,9 +6,11 @@ This project implements a predictive navigation system, including a baseline nav
 
 ## How to Run the Basic Navigation
 
-```bash
-# Please fill in the commands here
-```
+- `1. Backend`  
+  First run the backend, app.py(recommended) or app_with_ml.py with the code **python app.py(app_with_ml.py)**
+  
+- `2. Frontend`  
+  TThen navigate to the frontend directory and start a local server: using **python -m http.server 5500**. Open your browser and visit: **http://localhost:5500**
 
 ---
 
