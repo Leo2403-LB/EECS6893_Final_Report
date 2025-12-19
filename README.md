@@ -77,3 +77,7 @@ This project implements a predictive navigation system, including a baseline nav
 
 - For backend testing and demonstrations, please use `final/app.py`.
 - Machine learning inference is currently experimental and mainly documented through notebooks rather than real-time deployment.
+
+## Introduction Video
+
+- You can get more detailed information in our introduction video on YouTube:
