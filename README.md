@@ -83,4 +83,4 @@ This project implements a predictive navigation system, including a baseline nav
 
 ## Introduction Video
 
-- You can get more detailed information in our introduction video on YouTube:
+- You can get more detailed information in our introduction video on YouTube: https://www.youtube.com/watch?v=sFdgiV0d3A0
