@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Manhattan Fastest Route (Real-Time Traffic)</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+        #info {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 9999;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px #999;
+            font-size: 14px;
+        }
+        #info b {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="info">
+        <b>Click on the map:</b><br>
+        First click = Start<br>
+        Second click = End<br>
+         Route loads automatically<br>
+        <hr>
+        <div id="routeInfo">Waiting for selection…</div>
+    </div>
+
+    <div id="map"></div>
+
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

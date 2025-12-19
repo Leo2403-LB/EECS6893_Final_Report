@@ -1,0 +1,409 @@
+Frequency '1min' stored as 'min'
+Beginning AutoGluon training... Time limit = 600s
+AutoGluon will save models to '/content/here_chronos_bolt_tiny'
+=================== System Info ===================
+AutoGluon Version:  1.4.0
+Python Version:     3.12.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP Thu Oct  2 10:42:05 UTC 2025
+CPU Count:          2
+GPU Count:          1
+Memory Avail:       10.04 GB / 12.67 GB (79.2%)
+Disk Space Avail:   190.75 GB / 235.68 GB (80.9%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'min',
+ 'hyperparameters': {'Chronos': {'device': 'cuda',
+                                 'fine_tune': True,
+                                 'fine_tune_lr': 1e-05,
+                                 'fine_tune_steps': 200,
+                                 'model_path': 'bolt_tiny'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 3,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 600,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 'min'.
+Provided train_data has 115746 rows (NaN fraction=3.2%), 3742 time series. Median time series length is 31 (min=10, max=31). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-12-12 03:14:39
+Models that will be trained: ['Chronos[bolt_tiny]']
+Training timeseries model Chronos[bolt_tiny]. Training for up to 592.6s of the 592.6s of remaining time.
+	Warning: Exception caused Chronos[bolt_tiny] to fail during training... Skipping this model.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/trainer.py", line 357, in _train_and_save
+    model = self._train_single(train_data, model, val_data=val_data, time_limit=time_limit)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/trainer.py", line 273, in _train_single
+    model.fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/abstract/abstract_timeseries_model.py", line 515, in fit
+    self._fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/multi_window/multi_window_model.py", line 137, in _fit
+    model.fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/abstract/abstract_timeseries_model.py", line 515, in fit
+    self._fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/chronos/model.py", line 424, in _fit
+    from transformers.trainer import PrinterCallback, Trainer, TrainingArguments
+  File "/usr/local/lib/python3.12/dist-packages/transformers/trainer.py", line 226, in <module>
+    from peft import PeftModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/__init__.py", line 17, in <module>
+    from .auto import (
+  File "/usr/local/lib/python3.12/dist-packages/peft/auto.py", line 32, in <module>
+    from .peft_model import (
+  File "/usr/local/lib/python3.12/dist-packages/peft/peft_model.py", line 42, in <module>
+    from peft.tuners.lora.variants import get_alora_offsets_for_forward, get_alora_offsets_for_generate
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/__init__.py", line 15, in <module>
+    from .adalora import AdaLoraConfig, AdaLoraModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/adalora/__init__.py", line 18, in <module>
+    from .config import AdaLoraConfig
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/adalora/config.py", line 19, in <module>
+    from peft.tuners.lora import LoraConfig
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/lora/__init__.py", line 23, in <module>
+    from .model import LoraModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/lora/model.py", line 26, in <module>
+    from transformers.modeling_layers import GradientCheckpointingLayer
+ModuleNotFoundError: No module named 'transformers.modeling_layers'
+
+Not fitting ensemble as no models were successfully trained.
+Training complete. Models trained: []
+Total runtime: 17.05 s
+Trainer has no fit models that can predict.
+Frequency '1min' stored as 'min'
+Beginning AutoGluon training... Time limit = 600s
+AutoGluon will save models to '/content/here_chronos_bolt_tiny'
+=================== System Info ===================
+AutoGluon Version:  1.4.0
+Python Version:     3.12.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP Thu Oct  2 10:42:05 UTC 2025
+CPU Count:          2
+GPU Count:          1
+Memory Avail:       10.90 GB / 12.67 GB (86.1%)
+Disk Space Avail:   190.72 GB / 235.68 GB (80.9%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'min',
+ 'hyperparameters': {'Chronos': {'device': 'cuda',
+                                 'fine_tune': True,
+                                 'fine_tune_lr': 1e-05,
+                                 'fine_tune_steps': 200,
+                                 'model_path': 'bolt_tiny'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 3,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 600,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 'min'.
+Provided train_data has 115746 rows (NaN fraction=3.2%), 3742 time series. Median time series length is 31 (min=10, max=31). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-12-12 03:16:03
+Models that will be trained: ['Chronos[bolt_tiny]']
+Training timeseries model Chronos[bolt_tiny]. Training for up to 591.6s of the 591.6s of remaining time.
+	Warning: Exception caused Chronos[bolt_tiny] to fail during training... Skipping this model.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/trainer.py", line 357, in _train_and_save
+    model = self._train_single(train_data, model, val_data=val_data, time_limit=time_limit)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/trainer.py", line 273, in _train_single
+    model.fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/abstract/abstract_timeseries_model.py", line 515, in fit
+    self._fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/multi_window/multi_window_model.py", line 137, in _fit
+    model.fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/abstract/abstract_timeseries_model.py", line 515, in fit
+    self._fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/chronos/model.py", line 424, in _fit
+    from transformers.trainer import PrinterCallback, Trainer, TrainingArguments
+  File "/usr/local/lib/python3.12/dist-packages/transformers/trainer.py", line 226, in <module>
+    from peft import PeftModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/__init__.py", line 17, in <module>
+    from .auto import (
+  File "/usr/local/lib/python3.12/dist-packages/peft/auto.py", line 32, in <module>
+    from .peft_model import (
+  File "/usr/local/lib/python3.12/dist-packages/peft/peft_model.py", line 42, in <module>
+    from peft.tuners.lora.variants import get_alora_offsets_for_forward, get_alora_offsets_for_generate
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/__init__.py", line 15, in <module>
+    from .adalora import AdaLoraConfig, AdaLoraModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/adalora/__init__.py", line 18, in <module>
+    from .config import AdaLoraConfig
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/adalora/config.py", line 19, in <module>
+    from peft.tuners.lora import LoraConfig
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/lora/__init__.py", line 23, in <module>
+    from .model import LoraModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/lora/model.py", line 26, in <module>
+    from transformers.modeling_layers import GradientCheckpointingLayer
+ModuleNotFoundError: No module named 'transformers.modeling_layers'
+
+Not fitting ensemble as no models were successfully trained.
+Training complete. Models trained: []
+Total runtime: 7.05 s
+Trainer has no fit models that can predict.
+Warning: path already exists! This predictor may overwrite an existing predictor! path="/content/here_chronos_bolt_tiny"
+Frequency '1min' stored as 'min'
+Frequency '1min' stored as 'min'
+Beginning AutoGluon training... Time limit = 600s
+Beginning AutoGluon training... Time limit = 600s
+AutoGluon will save models to '/content/here_chronos_bolt_tiny'
+AutoGluon will save models to '/content/here_chronos_bolt_tiny'
+=================== System Info ===================
+AutoGluon Version:  1.4.0
+Python Version:     3.12.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP Thu Oct  2 10:42:05 UTC 2025
+CPU Count:          2
+GPU Count:          1
+Memory Avail:       10.47 GB / 12.67 GB (82.6%)
+Disk Space Avail:   190.71 GB / 235.68 GB (80.9%)
+===================================================
+=================== System Info ===================
+AutoGluon Version:  1.4.0
+Python Version:     3.12.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP Thu Oct  2 10:42:05 UTC 2025
+CPU Count:          2
+GPU Count:          1
+Memory Avail:       10.47 GB / 12.67 GB (82.6%)
+Disk Space Avail:   190.71 GB / 235.68 GB (80.9%)
+===================================================
+
+Fitting with arguments:
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'min',
+ 'hyperparameters': {'Chronos': {'device': 'cuda',
+                                 'fine_tune': True,
+                                 'fine_tune_lr': 1e-05,
+                                 'fine_tune_steps': 200,
+                                 'model_path': 'bolt_tiny'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 3,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 600,
+ 'verbosity': 2}
+
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'min',
+ 'hyperparameters': {'Chronos': {'device': 'cuda',
+                                 'fine_tune': True,
+                                 'fine_tune_lr': 1e-05,
+                                 'fine_tune_steps': 200,
+                                 'model_path': 'bolt_tiny'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 3,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 600,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 'min'.
+train_data with frequency 'IRREG' has been resampled to frequency 'min'.
+Provided train_data has 115746 rows (NaN fraction=3.2%), 3742 time series. Median time series length is 31 (min=10, max=31). 
+Provided train_data has 115746 rows (NaN fraction=3.2%), 3742 time series. Median time series length is 31 (min=10, max=31). 
+
+Provided data contains following columns:
+
+Provided data contains following columns:
+	target: 'target'
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+===================================================
+
+Starting training. Start time is 2025-12-12 03:17:47
+
+Starting training. Start time is 2025-12-12 03:17:47
+Models that will be trained: ['Chronos[bolt_tiny]']
+Models that will be trained: ['Chronos[bolt_tiny]']
+Training timeseries model Chronos[bolt_tiny]. Training for up to 590.1s of the 590.1s of remaining time.
+Training timeseries model Chronos[bolt_tiny]. Training for up to 590.1s of the 590.1s of remaining time.
+	Warning: Exception caused Chronos[bolt_tiny] to fail during training... Skipping this model.
+	Warning: Exception caused Chronos[bolt_tiny] to fail during training... Skipping this model.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/trainer.py", line 357, in _train_and_save
+    model = self._train_single(train_data, model, val_data=val_data, time_limit=time_limit)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/trainer.py", line 273, in _train_single
+    model.fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/abstract/abstract_timeseries_model.py", line 515, in fit
+    self._fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/multi_window/multi_window_model.py", line 137, in _fit
+    model.fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/abstract/abstract_timeseries_model.py", line 515, in fit
+    self._fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/chronos/model.py", line 424, in _fit
+    from transformers.trainer import PrinterCallback, Trainer, TrainingArguments
+  File "/usr/local/lib/python3.12/dist-packages/transformers/trainer.py", line 226, in <module>
+    from peft import PeftModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/__init__.py", line 35, in <module>
+    from .mapping_func import get_peft_model
+  File "/usr/local/lib/python3.12/dist-packages/peft/mapping_func.py", line 25, in <module>
+    from .mixed_model import PeftMixedModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/mixed_model.py", line 30, in <module>
+    from .tuners import MixedModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/__init__.py", line 37, in <module>
+    from .mixed import MixedModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/mixed/__init__.py", line 15, in <module>
+    from .model import COMPATIBLE_TUNER_TYPES, MixedModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/mixed/model.py", line 46, in <module>
+    lora.layer.LoraLayer,
+    ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/lora/__init__.py", line 61, in __getattr__
+    raise AttributeError(f"module {__name__} has no attribute {name}")
+AttributeError: module peft.tuners.lora has no attribute layer
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/trainer.py", line 357, in _train_and_save
+    model = self._train_single(train_data, model, val_data=val_data, time_limit=time_limit)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/trainer.py", line 273, in _train_single
+    model.fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/abstract/abstract_timeseries_model.py", line 515, in fit
+    self._fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/multi_window/multi_window_model.py", line 137, in _fit
+    model.fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/abstract/abstract_timeseries_model.py", line 515, in fit
+    self._fit(
+  File "/usr/local/lib/python3.12/dist-packages/autogluon/timeseries/models/chronos/model.py", line 424, in _fit
+    from transformers.trainer import PrinterCallback, Trainer, TrainingArguments
+  File "/usr/local/lib/python3.12/dist-packages/transformers/trainer.py", line 226, in <module>
+    from peft import PeftModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/__init__.py", line 35, in <module>
+    from .mapping_func import get_peft_model
+  File "/usr/local/lib/python3.12/dist-packages/peft/mapping_func.py", line 25, in <module>
+    from .mixed_model import PeftMixedModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/mixed_model.py", line 30, in <module>
+    from .tuners import MixedModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/__init__.py", line 37, in <module>
+    from .mixed import MixedModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/mixed/__init__.py", line 15, in <module>
+    from .model import COMPATIBLE_TUNER_TYPES, MixedModel
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/mixed/model.py", line 46, in <module>
+    lora.layer.LoraLayer,
+    ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/peft/tuners/lora/__init__.py", line 61, in __getattr__
+    raise AttributeError(f"module {__name__} has no attribute {name}")
+AttributeError: module peft.tuners.lora has no attribute layer
+
+Not fitting ensemble as no models were successfully trained.
+Not fitting ensemble as no models were successfully trained.
+Training complete. Models trained: []
+Training complete. Models trained: []
+Total runtime: 0.07 s
+Total runtime: 0.07 s
+Trainer has no fit models that can predict.
+Trainer has no fit models that can predict.
+Frequency '1min' stored as 'min'
+Beginning AutoGluon training... Time limit = 600s
+AutoGluon will save models to '/content/here_chronos_bolt_tiny'
+=================== System Info ===================
+AutoGluon Version:  1.4.0
+Python Version:     3.12.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP Thu Oct  2 10:42:05 UTC 2025
+CPU Count:          2
+GPU Count:          1
+Memory Avail:       10.69 GB / 12.67 GB (84.4%)
+Disk Space Avail:   190.71 GB / 235.68 GB (80.9%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'min',
+ 'hyperparameters': {'Chronos': {'device': 'cuda',
+                                 'fine_tune': True,
+                                 'fine_tune_lr': 1e-05,
+                                 'fine_tune_steps': 200,
+                                 'model_path': 'bolt_tiny'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 3,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 600,
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 'min'.
+Provided train_data has 115746 rows (NaN fraction=3.2%), 3742 time series. Median time series length is 31 (min=10, max=31). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-12-12 03:21:53
+Models that will be trained: ['Chronos[bolt_tiny]']
+Training timeseries model Chronos[bolt_tiny]. Training for up to 591.1s of the 591.1s of remaining time.
+	Saving fine-tuned model to /content/here_chronos_bolt_tiny/models/Chronos[bolt_tiny]/W0/fine-tuned-ckpt
+	-0.0675       = Validation score (-WQL)
+	23.80   s     = Training runtime
+	5.65    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[bolt_tiny]']
+Total runtime: 29.48 s
+Best model: Chronos[bolt_tiny]
+Best model score: -0.0675
