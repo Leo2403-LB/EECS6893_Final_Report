@@ -36,7 +36,7 @@ This project implements a predictive navigation system, including a baseline nav
   The **last execution cell** in the notebook shows the relevant test results.
   
 - `build_graph.py`  
-  This is the file which used to download manhattan map which can also work on other area for furthur extenstion. 
+  This is the file used to download manhattan map which can also work on other area for furthur extenstion. 
 ---
 
 ### Data Files
