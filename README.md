@@ -3,7 +3,10 @@
 This project implements a predictive navigation system, including a baseline navigation backend and experimental machine-learning–based speed prediction models.
 
 ---
+## Introduction Video
 
+- You can get more detailed information in our introduction video on YouTube: https://www.youtube.com/watch?v=sFdgiV0d3A0
+---
 ## How to Run the Basic Navigation
 
 - `1. Backend`  
@@ -81,6 +84,4 @@ This project implements a predictive navigation system, including a baseline nav
 - For backend testing and demonstrations, please use `final/app.py`.
 - Machine learning inference is currently experimental and mainly documented through notebooks rather than real-time deployment.
 
-## Introduction Video
 
-- You can get more detailed information in our introduction video on YouTube: https://www.youtube.com/watch?v=sFdgiV0d3A0
