@@ -22,6 +22,9 @@ This project implements a predictive navigation system, including a baseline nav
 
 ## File Descriptions
 
+- `eecs6893_final.pdf`  
+  This is the **Final Report**.  
+  
 ### Backend Code (Final Versions)
 
 - `final/app.py`  
