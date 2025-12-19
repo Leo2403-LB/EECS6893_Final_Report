@@ -37,7 +37,7 @@ This project implements a predictive navigation system, including a baseline nav
   This notebook contains function-level tests for the machine learning components.  
   The **last execution cell** in the notebook shows the relevant test results.
   
-- `build_graph.py`  
+- `final/build_graph.py`  
   This is the file used to download manhattan map which can also work on other area for furthur extenstion. 
 ---
 
